@@ -1,0 +1,45 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #71c0e4ba;
+    
+    }
+    
+    header {
+        background-color: rgba(58, 128, 161, 0.729);
+    }
+    
+    header h1 {
+        font-size: 100px;
+        text-align: left;
+        margin-left: 5%;
+        margin-right: 10%;
+        display: inline-block;
+    }
+     hr {
+        border: 3px solid rgb(0, 0, 0);
+    }
+    
+    .nav {
+        display: inline-block;
+    }
+    
+    
+    .nav-flex {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .nav-flex a {
+        font-size: 2rem;
+        padding: 2rem;
+    }
+    
+    .nav-flex a:hover {
+        cursor: pointer;
+        color: whitesmoke;
+    }
