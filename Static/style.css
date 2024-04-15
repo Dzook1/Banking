@@ -1,45 +1,105 @@
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body {
-        background-color: #71c0e4ba;
-    
-    }
-    
-    header {
-        background-color: rgba(58, 128, 161, 0.729);
-    }
-    
-    header h1 {
-        font-size: 100px;
-        text-align: left;
-        margin-left: 5%;
-        margin-right: 10%;
-        display: inline-block;
-    }
-     hr {
-        border: 3px solid rgb(0, 0, 0);
-    }
-    
-    .nav {
-        display: inline-block;
-    }
-    
-    
-    .nav-flex {
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    .nav-flex a {
-        font-size: 2rem;
-        padding: 2rem;
-    }
-    
-    .nav-flex a:hover {
-        cursor: pointer;
-        color: whitesmoke;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+height: 100%;
+}
+
+body {
+display: flex;
+flex-direction: column;
+background-color: #c0f7d1ba;
+}
+
+main {
+flex: 1;
+}
+
+header {
+  background-color: rgba(120, 146, 25, 0.729);
+}
+
+header h1 {
+  font-size: 100px;
+  text-align: left;
+  margin-left: 2%;
+  margin-right: 10%;
+  display: inline-block;
+  margin-bottom: 1% ;
+}
+
+hr {
+  border: 3px solid rgb(34, 43, 29);
+}
+
+.nav {
+  display: inline-block;
+}
+
+.nav-flex {
+  display: inline;
+  justify-content: flex-end;
+  margin-left: 15%;
+}
+
+.nav-flex a {
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.nav-flex a:hover {
+  cursor: pointer;
+  color: rgb(195, 239, 169);
+}
+
+a{
+  text-decoration: none;
+  color:rgb(34, 43, 29);;
+}
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px 30px 20px 30px;
+  color: #2f2f2f;
+  background-color: rgba(120, 146, 25, 0.729);
+  font-size: small;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer__addr {
+  margin-right: auto;
+}
+
+.footer a {
+  display: inline-block;
+  color:rgb(34, 43, 29);;
+}
+
+.footer__admin-signin {
+  font-size: 2rem;
+  padding: 2rem;
+  font-size: large;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__admin-signin:hover {
+  color: rgb(195, 239, 169);
+}
+header h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+footer h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
