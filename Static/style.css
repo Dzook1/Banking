@@ -171,3 +171,107 @@ footer h1 {
 .loginBox-signUpA:hover {
     cursor: pointer;
 }
+
+
+
+.signUpH1 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 3rem;
+}
+
+.signupBox {
+    background-color: rgb(185, 238, 157);
+    width: 775px;
+    height: 458px;
+    border: solid 2px black;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.signupFormBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.signupForm {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.signupForm-firstName {
+    width: 250px;
+    height: 30px;
+    padding:5px;
+    margin-right: 5px;
+}
+
+.signupForm-lastName {
+    width: 250px;
+    height:30px;
+    padding:5px;
+}
+
+.signupForm-username {
+    width: 250px;
+    height:30px;
+    padding:5px;
+    margin-right: 5px;
+}
+
+.signupForm-password {
+    width: 250px;
+    height:30px;
+    padding:5px;
+}
+
+.signupForm-ssn {
+    width: 90px;
+    height:30px;
+    padding:5px;
+}
+
+.signupForm-address {
+    width: 250px;
+    height:30px;
+    padding:5px;
+}
+
+.signupForm-phoneNumber {
+    width: 100px;
+    height:30px;
+    padding:5px;
+}
+
+.signupForm-createAccount {
+    width: 200px;
+    height: 30px;
+    padding: 6px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: rgb(31, 150, 79);
+    color: whitesmoke;
+    border: solid 2px black;
+}
+
+.signupForm-createAccount:hover {
+    cursor: pointer;
+    background-color: rgb(49, 145, 183);
+}
+
+.signupForm-flex {
+    display: flex;
+}
+
+.signupForm-flex-sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-content: center;
+}

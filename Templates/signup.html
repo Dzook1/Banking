@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Sign-Up{% endblock %}
+
+{% block nav %}
+<div class="nav-flex">
+    <a href="/">Back</a>
+</div>
+{% endblock %}
+
+{% block body %}
+<h1 class="signUpH1">Sign-Up</h1>
+<section class="signupBox">
+    <div class="signupFormBox">
+        <form action="/signup.html" class="signupForm" method="POST">
+            <div class="signupForm-flex">
+                <div class="signupForm-flex-sub">
+                    <label for="signupForm-firstName">First Name</label>
+                    <input type="text" class="signupForm-firstName" name="First Name" placeholder="First Name" required>
+                </div>
+
+                <div class="signupForm-flex-sub">
+                    <label for="signupForm-lastName">Last Name</label>
+                    <input type="text" class="signupForm-lastName" name="Last Name" placeholder="Last Name" required>
+                </div>
+            </div>
+            <br>
+            <div class="signupForm-flex">
+                <div class="signupForm-flex-sub">
+                    <label for="signupForm-username">Username</label>
+                    <input type="text" class="signupForm-username" name="Username" placeholder="Username" required>
+                </div>
+
+                <div class="signupForm-flex-sub">
+                    <label for="signupForm-password">Password</label>
+                    <input type="text" class="signupForm-password" name="Password" placeholder="Password" required>
+                </div>
+            </div>
+            <br>
+            
+            <br>
+            <label for="signupForm-ssn">SSN</label>
+            <input type="text" inputmode="numeric" class="signupForm-ssn" name="SSN" pattern="\d{3}-?\d{2}-?\d{4}" placeholder="000-00-0000" maxlength="11" required>
+            <br>
+            <label for="signupForm-address">Address</label>
+            <input type="text" class="signupForm-address" name="Address" placeholder="Address" required>
+            <br>
+            <label for="signupForm-phoneNumber">Phone Number</label>
+            <input type="text" class="signupForm-phoneNumber" name="Phone Number" placeholder="000-000-0000" maxlength="12" pattern="\d{3}-?\d{3}-?d{4}">
+            <br>
+            <input class="signupForm-createAccount" type="submit" value="Create Account">
+            <br>
+            <br>
+            <br>
+        </form>
+    </div>
+</section>
+{% endblock %}
