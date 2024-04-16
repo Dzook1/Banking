@@ -22,7 +22,7 @@ def homeGo():
     if result:
         global userSSN
         userSSN = result[0]
-        return render_template('signup.html')
+        return render_template('my_account.html')
     else:
         return render_template('index.html')
 
@@ -56,18 +56,18 @@ def signupGo():
 
     return render_template('index.html')
 
-@app.route('/MyAccount', methods=['GET'])
+@app.route('/my_account.html', methods=['GET'])
 def Account():
-    return render_template('MyAccount.html')
+    return render_template('my_account.html')
 
 
-@app.route('/MyAccount', methods=['POST'])
+@app.route('/my_account.html', methods=['POST'])
 def Accountin():
     conn.execute(text('Select Balance from Information where user'), request.form)
     conn.commit()
-    return render_template('MyAccount.html')
+    return render_template('my_account.html')
 
-@app.route('/Transfer')
+@app.route('/transfer.html')
 def transfer():    
      return render_template('transfer.html')
 
