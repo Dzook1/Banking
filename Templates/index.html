@@ -1,4 +1,21 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+{% block nav %}{% endblock %}
 {% block body %}
-    <h1>Home page</h1>
+    <h1 class="signInH1">Sign-In</h1>
+    <section class="loginBox">
+        <div class="loginFormBox">
+            <form action="/" class="loginForm" method="POST">
+                <label for="loginForm-username">Username</label>
+                <input type="text" class="loginForm-username" name="Username" placeholder="Username" required>
+                <br>
+                <label for="loginForm-password">Password</label>
+                <input type="password" class="loginForm-password" name="Password" placeholder="Password" required>
+                <input class="loginForm-login" type="submit" value="Login">
+            </form>
+        </div>
+        <br>
+        <a class="loginBox-signupA" href="/signup.html">No account? Sign-up here</a>
+    </section>
 {% endblock %}
