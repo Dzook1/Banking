@@ -46,10 +46,12 @@
             <input type="text" class="signupForm-address" name="Address" placeholder="Address" required>
             <br>
             <label for="signupForm-phoneNumber">Phone Number</label>
-            <input type="text" class="signupForm-phoneNumber" name="Phone Number" placeholder="000-000-0000" maxlength="12" pattern="\d{3}-?\d{3}-?d{4}">
+            <input type="text" class="signupForm-phoneNumber" name="Phone Number" placeholder="000-000-0000" maxlength="12">
             <br>
             <input class="signupForm-createAccount" type="submit" value="Create Account">
         </form>
     </div>
 </section>
 {% endblock %}
+
+{% block a %}<a href="/adminLogin.html" class="footer__admin-signin">Admin Sign in</a>{% endblock %}

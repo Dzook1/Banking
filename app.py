@@ -14,6 +14,10 @@ def adminLogin():
 def signup():
     return render_template('signup.html')
 
+@app.route('/adminHome.html')
+def adminHome():
+    return render_template('adminHome.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
 
