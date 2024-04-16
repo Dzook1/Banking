@@ -56,5 +56,20 @@ def signupGo():
 
     return render_template('index.html')
 
+@app.route('/MyAccount', methods=['GET'])
+def Account():
+    return render_template('MyAccount.html')
+
+
+@app.route('/MyAccount', methods=['POST'])
+def Accountin():
+    conn.execute(text('Select Balance from Information where user'), request.form)
+    conn.commit()
+    return render_template('MyAccount.html')
+
+@app.route('/Transfer')
+def transfer():    
+     return render_template('transfer.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

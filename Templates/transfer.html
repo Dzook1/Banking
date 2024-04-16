@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title%}
+    My Account
+{% endblock %}
+{% block nav %}
+<div class="nav-flex">
+    <a href="/">My Account</a>
+    <a href="/">Transfer</a>
+    <a href="/">Add Funds</a>
+    <a href="/">Sign-out</a>
+</div>
+{% endblock %}
+{% block body %}
+
+<div class="USER">
+    <div class="account-balance">
+        <h3>Your Account Balance:</h3>
+        <p>{{ user.balance }}</p>
+    </div>
+    <div class="transfer-form">
+        <h3>Transfer Funds:</h3>
+        <input type="number" id="transfer-amount" name="transfer-amount" min="0" max="{{ user.balance }}" required>
+        <input type="text" id="transfer-username" name="transfer-username" placeholder="Username" required>
+        <button type="submit" id="transfer-button" onclick="checkBalance()">Transfer</button>
+    </div>
+    
+{% endblock %}
