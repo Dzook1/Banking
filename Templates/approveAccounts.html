@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Approve Accounts{% endblock %}
+
+{% block nav %}
+    <div class="nav-flex">
+        <a href="/accounts.html">View All Accounts</a>
+        <a href="/approveAccounts.html">Approve Accounts</a>
+    </div>
+{% endblock %}
+
+{% block body %}
+<h1 class="requestsH">Requests</h1>
+<table class="accountsTable">
+    <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+        <th>SSN</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Approve</th>
+        <th>Decline</th>
+    </thead>
+    <tbody>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+        <td><button class="tableBtn approveBtn">Approve</button></td>
+        <td><button class="tableBtn declineBtn">Decline</button></td>
+    </tbody>
+</table>
+{% endblock %}
+
+{% block a %}<a href="/" class="footer__user-signin">User Sign in</a>{% endblock %}
+
