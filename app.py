@@ -8,7 +8,7 @@ def home():
 
 @app.route('/base')
 def test():
-    return render_template('base.html')
+    return render_template('Index.html')
 
 @app.route('/MyAccount')
 def Account():    
