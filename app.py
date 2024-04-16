@@ -8,11 +8,7 @@ conn = engine.connect()
 
 @app.route('/')
 def home():
-    return render_template('Index.html')
-
-@app.route('/base')
-def test():
-    return render_template('Index.html')
+    return render_template('index.html')
 
 @app.route('/MyAccount')
 def Account():    
@@ -38,5 +34,13 @@ def transfer():
 
 if __name__ == '__main__':
     app.run(debug=True)
+@app.route('/adminLogin.html')
+def adminLogin():
+    return render_template('adminLogin.html')
 
-    
+@app.route('/signup.html')
+def signup():
+    return render_template('signup.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
