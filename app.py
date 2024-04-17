@@ -3,7 +3,8 @@ from sqlalchemy import create_engine, text
 
 app = Flask(__name__)
 
-conn_str = "mysql://root:Dougnang1@localhost/banking"
+
+conn_str = "mysql://root:9866@localhost/banking"
 engine = create_engine(conn_str, echo=True)
 conn = engine.connect()
 
@@ -23,12 +24,14 @@ def homeGo():
         global userSSN
         userSSN = result[0]
 
-        query = text('Select Balance from Information where SSN = :userSSN')
+        query = text('Select Balance, First_Name from Information where SSN = :userSSN')
         result = conn.execute(query, {"userSSN": userSSN}).fetchone()
 
-        return render_template('my_account.html', balance=result[0])
+        return render_template('my_account.html', balance=result[0], name=result[1])
+
     else:
         return render_template('index.html')
+    
 
 @app.route('/adminLogin.html', methods=['GET'])
 def adminLogin():
