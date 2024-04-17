@@ -3,7 +3,7 @@ from sqlalchemy import create_engine, text
 
 app = Flask(__name__)
 
-conn_str = "mysql://root:cset155@localhost/banking"
+conn_str = "mysql://root:9866@localhost/banking"
 engine = create_engine(conn_str, echo=True)
 conn = engine.connect()
 
@@ -22,9 +22,14 @@ def homeGo():
     if result:
         global userSSN
         userSSN = result[0]
-        return render_template('my_account.html')
+
+        query = text('Select Balance, First_Name from Information where SSN = :userSSN')
+        result = conn.execute(query, {"userSSN": userSSN}).fetchone()
+
+        return render_template('my_account.html', balance=result[0], name=result[1])
     else:
         return render_template('index.html')
+    
 
 @app.route('/adminLogin.html', methods=['GET'])
 def adminLogin():
@@ -56,16 +61,12 @@ def signupGo():
 
     return render_template('index.html')
 
-@app.route('/my_account.html', methods=['GET'])
+
+@app.route('/my_account.html')
 def Account():
-    return render_template('my_account.html')
-
-
-@app.route('/my_account.html', methods=['POST'])
-def Accountin():
-    conn.execute(text('Select Balance from Information where user'), request.form)
-    conn.commit()
-    return render_template('my_account.html')
+    query = text('Select Balance from Information where SSN = :userSSN')
+    result = conn.execute(query, {"userSSN": userSSN}).fetchone()
+    return render_template('my_account.html', balance=result[0])
 
 @app.route('/transfer.html')
 def transfer():    
