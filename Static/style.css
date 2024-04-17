@@ -406,3 +406,133 @@ footer a {
   background-color: pink;
 }
 
+
+.account-balance {
+  border: 10px solid #78cb78;
+  padding: 18px;
+  border-radius: 5px;
+  background-color: #26b339;
+  text-align: center;
+  width: 300px;
+  margin-left: 41%;
+}
+.account-balance p{
+  color: rgb(225, 246, 215);
+  font-size: 34px;
+}
+.account h1{
+  font-size: 80px;
+}
+.transfer-form {
+  background-color: #c0f7d1;
+  border: 2px solid #78cb78;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.transfer-form h2 {
+  color: #2f2f2f;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.transfer-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2f2f2f;
+}
+
+.transfer-form input[type="text"],
+.transfer-form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #78cb78;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.transfer-form input[type="submit"] {
+  background-color: #26b339;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.transfer-form input[type="submit"]:hover {
+  background-color: #1f8e2b;
+}
+
+.addFundsH {
+  text-align: center;
+  font-size: 40px;
+  margin: 20px;
+  border: dotted 4px rgb(70, 198, 70);
+  padding: 5px;
+}
+
+.fundsBox {
+  background-color: whitesmoke;
+  width: 425px;
+  height: 420px;
+  margin: 0 auto;
+  border: solid 4px black;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.fundsForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.fundsForm-item {
+  width: 300px;
+  height: 50px;
+  font-size: 35px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.fundsForm-cardNumber {
+  width: 299px;
+}
+
+.fundsForm-expiry {
+  width: 250px;
+}
+
+.fundsForm-ccv {
+  width: 86px;
+}
+
+.fundsForm-amount {
+
+}
+
+.fundsForm-submit {
+  align-self: center;
+  margin-top: 15px;
+  width: 200px;
+  height: 40px;
+  background-color: rgb(60, 204, 89);
+  border: solid 3px rgb(2, 56, 2);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+} 
+
+.fundsForm-submit:hover {
+  cursor: pointer;
+  background-color: rgb(146, 232, 164);
+}

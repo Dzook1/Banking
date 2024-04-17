@@ -5,7 +5,8 @@ import random
 app = Flask(__name__)
 
 
-conn_str = "mysql://root:Dougnang1@localhost/banking"
+
+conn_str = "mysql://root:cset155@localhost/banking"
 engine = create_engine(conn_str, echo=True)
 conn = engine.connect()
 
@@ -72,7 +73,9 @@ def Account():
 
 @app.route('/transfer.html')
 def transfer():    
-     return render_template('transfer.html')
+       query = text('Select Balance from Information where SSN = :userSSN')
+       result = conn.execute(query, {"userSSN": userSSN}).fetchone()
+       return render_template('transfer.html', balance=result[0])
 
 @app.route('/adminHome.html')
 def adminHome():
@@ -119,6 +122,11 @@ def approveAccountsGo():
     query = text("SELECT information.First_Name, information.Last_Name, information.Username, information.SSN, information.Address, information.Phone_Number FROM information, account_approval WHERE information.SSN = account_approval.SSN AND account_approval.account_number = '';")
     data = conn.execute(query)
     return render_template('approveAccounts.html', data=data)
+
+@app.route('/addFunds.html')
+def addFunds():
+    return render_template('addFunds.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
