@@ -18,17 +18,22 @@
             <th>SSN</th>
             <th>Address</th>
             <th>Phone Number</th>
+            <th>Account Number</th>
         </thead>
         <tbody>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[5] }}</td>
+                    <td>{{ row[6] }}</td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 {% endblock %}
 
 {% block a %}<a href="/" class="footer__user-signin">User Sign in</a>{% endblock %}
-
