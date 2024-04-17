@@ -406,6 +406,71 @@ footer a {
   background-color: pink;
 }
 
+
+.account-balance {
+  border: 10px solid #78cb78;
+  padding: 18px;
+  border-radius: 5px;
+  background-color: #26b339;
+  text-align: center;
+  width: 300px;
+  margin-left: 41%;
+}
+.account-balance p{
+  color: rgb(225, 246, 215);
+  font-size: 34px;
+}
+.account h1{
+  font-size: 80px;
+}
+.transfer-form {
+  background-color: #c0f7d1;
+  border: 2px solid #78cb78;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.transfer-form h2 {
+  color: #2f2f2f;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.transfer-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2f2f2f;
+}
+
+.transfer-form input[type="text"],
+.transfer-form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #78cb78;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.transfer-form input[type="submit"] {
+  background-color: #26b339;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.transfer-form input[type="submit"]:hover {
+  background-color: #1f8e2b;
+}
+
 .addFundsH {
   text-align: center;
   font-size: 40px;
@@ -471,4 +536,3 @@ footer a {
   cursor: pointer;
   background-color: rgb(146, 232, 164);
 }
-
