@@ -23,152 +23,30 @@
                 <th>Phone Number</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                    <td>data</td>
-                </tr>
-                
-                </tbody>
+                {% for row in data %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>{{ row[4] }}</td>
+                        <td>{{ row[5] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
         </table>
     </div>
     
-
     <div class="grid-search">
         <label class="grid-label" for="grid-search-ssn">Enter SSN</label>
-        <input type="text" inputmode="numeric" class="grid-search-ssn" name="SSN" pattern="\d{3}-?\d{2}-?\d{4}" placeholder="000-00-0000" maxlength="11" required>
-        <div class="grid-flex">
-            <button class="tableBtn approveBtn">Approve</button>
-            <button class="tableBtn declineBtn">Decline</button>
-        </div>  
+        <form action="/approveAccounts.html" method="POST" class="grid-form">
+            <input type="text" inputmode="numeric" class="grid-search-ssn" name="SSN" pattern="\d{3}-?\d{2}-?\d{4}" placeholder="000-00-0000" maxlength="11" required>
+            <div class="grid-flex">
+                <input class="tableBtn approveBtn" name="submit_button" type="submit" value="Approve">
+                <input class="tableBtn declineBtn" name="submit_button" type="submit" value="Deny">
+            </div>
+        </form>
     </div>
 </div>
-
-
 {% endblock %}
-
 {% block a %}<a href="/" class="footer__user-signin">User Sign in</a>{% endblock %}
-

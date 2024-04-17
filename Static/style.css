@@ -345,6 +345,10 @@ footer a {
   background-color: rgb(60, 132, 60);
 }
 
+.grid-search-ssn {
+    margin-left: 35px;
+}
+
 .grid-label {
   color: whitesmoke;
   font-weight: 700;
@@ -514,10 +518,6 @@ footer a {
 
 .fundsForm-ccv {
   width: 86px;
-}
-
-.fundsForm-amount {
-
 }
 
 .fundsForm-submit {
