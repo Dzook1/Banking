@@ -323,6 +323,46 @@ footer a {
   padding: 5px;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 95%;
+  border: solid 2px black;
+  margin: 0 auto;
+}
+
+.grid-table {
+  background-color: rgb(131, 220, 131);
+  overflow-y: auto;
+  height: 400px;
+}
+
+.grid-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(60, 132, 60);
+}
+
+.grid-label {
+  color: whitesmoke;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.grid-search-ssn {
+  width: 185px;
+  height: 50px;
+  font-size: 30px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.grid-flex {
+  margin-top: 20px;
+}
+
 .accountsTable {
   background-color: whitesmoke;
   width: 90%;
@@ -339,8 +379,10 @@ footer a {
 .tableBtn {
   color: whitesmoke;
   font-weight: 700;
-  width: 100px;
+  width: 125px;
+  height: 50px;
   padding: 5px;
+  font-size: 20px;
 }
 
 .tableBtn:hover {
