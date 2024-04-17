@@ -3,7 +3,7 @@ from sqlalchemy import create_engine, text
 
 app = Flask(__name__)
 
-conn_str = "mysql://root:Dougnang1@localhost/banking"
+conn_str = "mysql://root:cset155@localhost/banking"
 engine = create_engine(conn_str, echo=True)
 conn = engine.connect()
 
@@ -70,6 +70,18 @@ def Accountin():
 @app.route('/transfer.html')
 def transfer():    
      return render_template('transfer.html')
+
+@app.route('/adminHome.html')
+def adminHome():
+    return render_template('adminHome.html')
+
+@app.route('/accounts.html')
+def accounts():
+    return render_template('accounts.html')
+
+@app.route('/approveAccounts.html')
+def approveAccounts():
+    return render_template('approveAccounts.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
