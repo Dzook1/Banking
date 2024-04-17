@@ -87,7 +87,7 @@ def accounts():
 def approveAccounts():
     return render_template('approveAccounts.html')
 
-@app.route('/addFunds.html')
+@app.route('/addFunds.html', methods=['GET'])
 def addFunds():
     return render_template('addFunds.html')
 
