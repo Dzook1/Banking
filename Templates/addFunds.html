@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Add Funds{% endblock %}
+
+{% block nav %}
+<div class="nav-flex">
+    <a href="/my_account.html">My Account</a>
+    <a href="/transfer.html">Transfer</a>
+    <a href="/addFunds.html">Add Funds</a>
+    <a href="/">Sign-out</a>
+</div>
+{% endblock %}
+
+{% block body %}
+    <h1 class="addFundsH">Add Funds</h1>
+    <section class="fundsBox">
+        <form class="fundsForm">
+            <label for="fundsForm-cardNumber">Card Number</label>
+            <input type="number" class="fundsForm-item fundsForm-cardNumber" placeholder="0000000000000000" maxlength="16" required>
+            <label for="fundsForm-expiry">Expiry</label>
+            <input type="date" class="fundsForm-item fundsForm-expiry" placeholder="00/00/0000" maxlength="10" required>
+            <label for="fundsform-ccv">CCV</label>
+            <input type="number" class="fundsForm-item fundsForm-ccv" placeholder="000" maxlength="3" required>
+            <label for="fundsForm-amount">Amount</label>
+            <input type="number" name="Amount" class="fundsForm-item fundsForm-amount" maxlength="13" placeholder="$" required>
+            <input type="submit" class="fundsForm-submit" value="Enter">
+        </form>
+    </section>
+{% endblock %}
+
