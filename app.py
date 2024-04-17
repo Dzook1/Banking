@@ -71,7 +71,9 @@ def Account():
 
 @app.route('/transfer.html')
 def transfer():    
-     return render_template('transfer.html')
+       query = text('Select Balance from Information where SSN = :userSSN')
+       result = conn.execute(query, {"userSSN": userSSN}).fetchone()
+       return render_template('transfer.html', balance=result[0])
 
 @app.route('/adminHome.html')
 def adminHome():
