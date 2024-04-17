@@ -6,25 +6,24 @@
 <div class="nav-flex">
     <a href="/my_account.html">My Account</a>
     <a href="/transfer.html">Transfer</a>
-    <a href="/">Add Funds</a>
+    <a href="/addFunds.html">Add Funds</a>
     <a href="/">Sign-out</a>
 </div>
 {% endblock %}
 {% block body %}
-
-<div class="account-balance">
-    <h2>Account Balance:</h2>
-    <p>${{ balance }}</p>
-</div>
-
-<br>
-
-
-    <div class="transfer-form">
-        <h2>Transfer Funds:</h2>
-        <input type="number" id="transfer-amount" name="transfer-amount" min="0" max="{{ balance }}" required>
-        <input type="text" id="transfer-username" name="transfer-username" placeholder="Username" required>
-        <input class="sumbit-transfer" type="submit" value="Transfer Funds">
+    <div class="account-balance">
+        <h2>Account Balance:</h2>
+        <p>${{ balance }}</p>
     </div>
-    
+
+    <br>
+
+    <form action="/transfer.html" method="POST">
+        <div class="transfer-form">
+            <h2>Transfer Funds:</h2>
+            <input type="number" step="0.01" id="transfer-amount" name="transfer-amount" min="0" max="{{ balance }}" placeholder="Enter Amount" required>
+            <input type="text" id="transfer-username" name="transfer-username" placeholder="Account Number" required>
+            <input class="sumbit-transfer" type="submit" value="Transfer Funds">
+        </div>
+    </form>
 {% endblock %}
