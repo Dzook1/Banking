@@ -3,7 +3,7 @@ from sqlalchemy import create_engine, text
 
 app = Flask(__name__)
 
-conn_str = "mysql://root:cset155@localhost/banking"
+conn_str = "mysql://root:Dougnang1@localhost/banking"
 engine = create_engine(conn_str, echo=True)
 conn = engine.connect()
 
@@ -22,7 +22,11 @@ def homeGo():
     if result:
         global userSSN
         userSSN = result[0]
-        return render_template('my_account.html')
+
+        query = text('Select Balance from Information where SSN = :userSSN')
+        result = conn.execute(query, {"userSSN": userSSN}).fetchone()
+
+        return render_template('my_account.html', balance=result[0])
     else:
         return render_template('index.html')
 
@@ -39,7 +43,7 @@ def adminLoginGo():
     result = conn.execute(query, {'username': username, 'password': password}).fetchone()
 
     if result:
-        return render_template('signup.html')
+        return render_template('adminHome.html')
     else:
         return render_template('index.html')
 
@@ -56,16 +60,11 @@ def signupGo():
 
     return render_template('index.html')
 
-@app.route('/my_account.html', methods=['GET'])
+@app.route('/my_account.html')
 def Account():
-    return render_template('my_account.html')
-
-
-@app.route('/my_account.html', methods=['POST'])
-def Accountin():
-    conn.execute(text('Select Balance from Information where user'), request.form)
-    conn.commit()
-    return render_template('my_account.html')
+    query = text('Select Balance from Information where SSN = :userSSN')
+    result = conn.execute(query, {"userSSN": userSSN}).fetchone()
+    return render_template('my_account.html', balance=result[0])
 
 @app.route('/transfer.html')
 def transfer():    
@@ -77,7 +76,9 @@ def adminHome():
 
 @app.route('/accounts.html')
 def accounts():
-    return render_template('accounts.html')
+    query = text("SELECT information.First_Name, information.Last_Name, information.Username, information.SSN, information.Address, information.Phone_Number, account_approval.account_number FROM information, account_approval WHERE information.SSN = account_approval.SSN AND account_approval.account_number <> '';")
+    data = conn.execute(query)
+    return render_template('accounts.html', data=data)
 
 @app.route('/approveAccounts.html')
 def approveAccounts():
